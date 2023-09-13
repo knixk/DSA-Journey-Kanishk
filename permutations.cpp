@@ -1,26 +1,35 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void permutations(int i, int n, string s, string output) {
-
+void permutations(int start, int n, int j, string s) {
 
 	// base case
 
-	if (i == n) {
-		cout << output;
+	if (j == n - 1) {
+		cout << s << endl;
+		return;
 	}
+
+	// for (int i = )
 
 	// recursive case 
 
-	for (int start = i; start < n; start++) {
+	for (int i = j; i < n; i++) {
 
-		s[0] = temp;
+		char temp;
+
+		temp = s[start];
+		s[start] = s[i];
+		s[i] = temp;
+
+		permutations(start, n, j + 1, s);
+
 		s[i] = s[0];
 		s[0] = temp;
-		
-		permutations(i, n, s, start);
 
 	}
+
+	return;
 
 }
 
@@ -32,10 +41,10 @@ int main() {
 	freopen("output.txt","w",stdout); 
 	#endif
 
-	string s, output; cin >> s;
-	int i = 0, n = s.size();
+	string s; cin >> s;
+	int n = s.size(), j = 0;
 
-	permutations(i, n, s, output);
+	permutations(0, n, j, s);
 
 	return 0;
 	
