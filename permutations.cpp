@@ -49,12 +49,3 @@ int main() {
 	return 0;
 	
 }
-
-// no matter how good friends we be 
-
-/* 
-
-we should never forget we are just online friends. 
-ever. We are jsut online friends. No matter how good friends we be.
-
-*/
