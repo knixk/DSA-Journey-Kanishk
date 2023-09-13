@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void permutations(int start, int n, int j, string s) {
+void permutations(int n, int j, string s) {
 
 	// base case
 
@@ -18,11 +18,11 @@ void permutations(int start, int n, int j, string s) {
 
 		char temp;
 
-		temp = s[start];
-		s[start] = s[i];
+		temp = s[0];
+		s[0] = s[i];
 		s[i] = temp;
 
-		permutations(start, n, j + 1, s);
+		permutations(n, j + 1, s);
 
 		s[i] = s[0];
 		s[0] = temp;
@@ -44,7 +44,7 @@ int main() {
 	string s; cin >> s;
 	int n = s.size(), j = 0;
 
-	permutations(0, n, j, s);
+	permutations(n, j, s);
 
 	return 0;
 	
