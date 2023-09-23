@@ -62,17 +62,21 @@ bool placeNQueens(int board[][20], int n, int i) {
 
 	for (int j = 0; j < n; j++) {
 
-		board[i][j] = 1;
+		if (canPlace(board, n, i, j)) {
+		
+			board[i][j] = 1;
 
-		bool ans = canPlace(board, n, i + 1, j);
+			bool ans = placeNQueens(board, n, i + 1);
 
-		if (ans) {
-			return true;
+			if (ans) {
+				return true;
+			}
+
+			// go back
+
+			board[i][j] = 0;
+
 		}
-
-		// go back
-
-		board[i][j] = 0;
 
 	}
 
