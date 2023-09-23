@@ -15,9 +15,9 @@ void printAns(int board[][20], int n) {
 bool canPlace(int board[][20], int n, int x, int y) {
 
 	// check for top
-	for (int j = 0; j < n; j++) {
+	for (int i = 0; i < x; i++) {
 
-		if (board[x][j] == 1) {
+		if (board[i][y] == 1) {
 			return false;
 		}
 
@@ -85,9 +85,11 @@ int main() {
 	int board[20][20] = {0};
 	int n; cin >> n;
 
-	placeNQueens(board, n, 0);
+	bool ans = placeNQueens(board, n, 0);
 
-	printAns(board, n);
+	if (!ans) {
+		cout << "Couldn't place";
+	}
 
 	return 0;
 }
