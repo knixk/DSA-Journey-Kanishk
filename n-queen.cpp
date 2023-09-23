@@ -52,9 +52,7 @@ bool canPlace(int board[][20], int n, int x, int y) {
 }
 
 bool placeNQueens(int board[][20], int n, int i) {
-
-	cout << "running" << "\n";
-
+	
 	if (i == n) {
 		printAns(board, n);
 		return true;
@@ -75,13 +73,10 @@ bool placeNQueens(int board[][20], int n, int i) {
 			// go back
 
 			board[i][j] = 0;
-
 		}
-
 	}
 
 	return false;
-
 }
 
 int main() {
