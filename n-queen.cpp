@@ -45,12 +45,11 @@ bool canPlace(int board[][20], int n, int x, int y) {
 		if (board[i][j]) {
 			return false;
 		}
-		i++; 
-		j--;
+		i--; 
+		j++;
 	}
 
 	return true;
-
 }
 
 bool placeNQueens(int board[][20], int n, int i) {
@@ -93,7 +92,7 @@ int main() {
 	bool ans = placeNQueens(board, n, 0);
 
 	if (!ans) {
-		cout << "Couldn't place";
+		cout << "Couldn't place \n";
 	}
 
 	return 0;
