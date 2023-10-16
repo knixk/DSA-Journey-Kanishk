@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// needs to be fixed
+
 void printAns(int board[][20], int n) {
 
 	for (int i = 0; i < n; i++) {
@@ -71,7 +73,6 @@ bool placeNQueens(int board[][20], int n, int i) {
 			}
 
 			// go back
-
 			board[i][j] = 0;
 		}
 	}
@@ -80,6 +81,11 @@ bool placeNQueens(int board[][20], int n, int i) {
 }
 
 int main() {
+
+	#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+	#endif
 
 	int board[20][20] = {0};
 	int n; cin >> n;
