@@ -23,7 +23,6 @@ public:
             generatePermutes(nums, j + 1, n, ans);
 
             // backtracking
-            swapInt = nums[j];
             nums[j] = nums[i];
             nums[i] = swapInt;
         }
