@@ -13,7 +13,6 @@ Output
 
 */
 
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -31,11 +30,10 @@ public:
 
 int getMid(node *head){
     //Complete this function to return data middle node
-
-    node * slow = head;
+     node * slow = head;
     node * fast = head;
 
-    while (fast != NULL && fast->next) {
+    while (fast && fast->next && fast->next->next) {
     	fast = fast->next->next;
     	slow = slow->next;
     }
