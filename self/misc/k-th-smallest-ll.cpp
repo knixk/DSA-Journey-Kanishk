@@ -41,7 +41,7 @@ int kthLastElement(node *head, int k){
     int size = 0;
 
     while (traverse) {
-    	traverse->next;
+    	traverse = traverse->next;
     	size++;
     }
     
