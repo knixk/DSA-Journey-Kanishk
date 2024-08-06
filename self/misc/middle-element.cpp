@@ -30,15 +30,14 @@ public:
 };
 
 int getMid(node *head){
-
     //Complete this function to return data middle node
 
     node * slow = head;
     node * fast = head;
 
-    while (fast->next) {
-    	slow = slow->next;
+    while (fast != NULL && fast->next) {
     	fast = fast->next->next;
+    	slow = slow->next;
     }
 
     int ans = slow->data;
