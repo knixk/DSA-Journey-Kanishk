@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/*
+/* 
 
 using the modulo property,
 basically we want a number in range of some n

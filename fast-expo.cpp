@@ -3,7 +3,7 @@ using namespace std;
 
 int fast_expo(int a, int n) {
 
-	int ans = 1;
+	int ans = 1; 
 
 	while (n > 0) {
 		if (n & 1) {

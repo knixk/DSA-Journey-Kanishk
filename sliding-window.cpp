@@ -15,7 +15,7 @@ void housing(int * arr, int n, int k) {
 
 		// contract the wnidow
 		while ((cs > k or cs < k) and i < n) {
-			cs -= abs(arr[i]);
+			cs -= abs(arr[i]);	
 			i++;
 		}
 
@@ -108,3 +108,4 @@ int main() {
 
     return 0;
 }
+
