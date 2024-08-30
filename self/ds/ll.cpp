@@ -17,6 +17,13 @@ public:
 
 }
 
+class LinkedList {
+
+	LinkedList(node * head) {
+
+	}
+
+}
 
 
 int main() {

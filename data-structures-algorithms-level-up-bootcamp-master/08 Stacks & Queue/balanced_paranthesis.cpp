@@ -7,33 +7,33 @@ using namespace std;
 bool isBalanced(string input){
 	//Todo: Complete this method
 
-	stack<char> s;
+	stack<char> my_stack;
 	for(auto ch : input){
 
 		switch(ch){
 			case '(':
 			case '[':
-			case '{': s.push(ch);
+			case '{': my_stack.push(ch);
 						break;
 
-			case ')': if(!s.empty() and s.top()=='('){
-						s.pop();
+			case ')': if(!my_stack.empty() and my_stack.top()=='('){
+						my_stack.pop();
 					  }
 					  else{
 					  	return false;
 					  }
 					  break;
 
-			case ']': if(!s.empty() and s.top()=='['){
-						s.pop();
+			case ']': if(!my_stack.empty() and my_stack.top()=='['){
+						my_stack.pop();
 					  }
 					  else{
 					  	return false;
 					  }
 					  break;
 
-			case '}': if(!s.empty() and s.top()=='{'){
-						s.pop();
+			case '}': if(!my_stack.empty() and my_stack.top()=='{'){
+						my_stack.pop();
 					  }
 					  else{
 					  	return false;
@@ -43,7 +43,7 @@ bool isBalanced(string input){
 		}
 	}
 
-	if(s.empty()==true){
+	if(my_stack.empty()==true){
 		return true;
 	}
 	return false;
