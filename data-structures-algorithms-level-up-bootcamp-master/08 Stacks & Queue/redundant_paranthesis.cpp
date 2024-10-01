@@ -19,7 +19,7 @@ bool checkRedundant(string str){
 				char top = s.top();
 				if(top=='+' or top=='-' or top=='*' or top=='/'){
 					operator_found = true;
-				}
+				} 
 				s.pop();
 			}
 			s.pop(); //pop the opening bracked after the loop if over
