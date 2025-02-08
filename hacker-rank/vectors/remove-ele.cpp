@@ -24,9 +24,8 @@ int main() {
     cin >> range_one >> range_two;
     eleToRemove--;
     range_one--;
-    range_two -= 2;
+    range_two--;
 
-    cout << range_two << endl;
 
     // 1 4 6 2 8 9
     // 1 6 2 8 9 -- removed ele at pos 2 (4)
@@ -34,10 +33,13 @@ int main() {
 
     ans.erase(ans.begin() + eleToRemove);
 
+    //  this was correct till here
+
     for (auto x : ans) {
         cout << x << " ";
     }
     
+    cout << ans[range_one] << ": im range one" << endl;
 
     ans.erase(ans.begin() + range_one, ans.begin() + range_two);
     
