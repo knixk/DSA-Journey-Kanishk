@@ -59,7 +59,7 @@ class Box {
     }
     
     long long CalculateVolume() {
-        long long ans = l * b * h;
+        long long ans = (long long) l * b * h;
         return ans;
     }
         
