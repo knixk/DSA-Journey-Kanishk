@@ -6,9 +6,8 @@
 using namespace std;
 
 class Rectangle {
-    private:
-        int width, height;
     public:
+        int width, height;
         void read_input() {
             int w, h;
             cin >> w >> h;

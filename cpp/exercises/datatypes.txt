@@ -1,0 +1,14 @@
+Q. explain the concept of data types?
+ans:
+
+
+data types are basically used to define what is the type of a variable,
+
+for example int, float, double, bool.
+
+each data type uses a different memory, therefore we must define it.
+
+for example char uses 1 byte,
+int uses one byte,
+double uses 8 bytes,
+float uses 4 bytes
