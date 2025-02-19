@@ -1,7 +1,6 @@
-inserted
-inserted
-inserted
-updated18
-updated20
-erased
-updated0
+20
+12
+18
+18 :im print
+20 :im print
+0 :im print

@@ -28,7 +28,7 @@ int main() {
             cin >> two;
             m.erase(two);
         } 
-        else (one == 3) { // Print case
+        else { // Print case
             cin >> two;
             if (m.find(two) != m.end()) {
                 cout << m[two];
