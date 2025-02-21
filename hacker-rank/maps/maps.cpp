@@ -29,12 +29,13 @@ int main() {
         cin >> one;
         if (one == 1) {
             cin >> two >> three;
-            m[two] = three; // No need to check find(), direct assignment works
-            cout << m[two] << "\n";
+            // m[two] += three;
+
+
         } 
         else if (one == 2) {
             cin >> two;
-            m.erase(two);
+            // m.erase(two);
         } 
         else { // Print case
             cin >> two;
@@ -44,10 +45,14 @@ int main() {
             //     cout << 0;
             // }
 
-            cout << m[two] << " :im print";
+            // cout << m[two] << " :im print";
 
-            cout << endl;
+            // cout << endl;
         }
+    }
+
+    for (auto it = m.begin(); it != m.end(); it++) {
+      cout << it;
     }
     return 0;  
 }
