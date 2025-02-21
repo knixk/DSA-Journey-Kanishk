@@ -1,1 +1,4 @@
-Nuh nuh 0
+Walter 56 99 1
+Jesse 18 403 1
+Pinkman 22 135 2
+White 58 87 2
