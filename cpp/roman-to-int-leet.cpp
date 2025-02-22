@@ -19,7 +19,7 @@
             int i = 0;
 
 
-            while (i <= n - 1) {
+            while (i <= n) {
                 char cur = s[i];
 
                 int cur_val = m[cur];
@@ -56,12 +56,12 @@
                 i++;
                 i++;
 
-                // if (i + 2 > n) {
-                //     char lastChar = s[n];
-                //     int finalDigit = m[lastChar];
-                //     sum += finalDigit;
-                //     break;
-                // }
+                if (i == n) {
+                    char lastChar = s[i];
+                    int finalDigit = m[lastChar];
+                    sum += finalDigit;
+                    break;
+                }
 
             }
 
