@@ -22,11 +22,11 @@ void printStr(string s, int i) {
 
     if (i == s.size() - 1) {
         // we're at the last char
-        cout << s[i];
+        cout << i;
         return;
     }
 
-    cout << s[i];
+    cout << i;
     // recursive case
     reverseStr(s, i + 1);
 
@@ -53,11 +53,15 @@ int main() {
     // if u can't solve these everything is useless
 
     string str = "HelloEveryone";
-    string ans;
+    // string ans;
     int count = 1;
 
     // reverse a string using rec
-    reverseStr(str, 0);
+    // reverseStr(sstr, 0);
+
+    // cout << endl;
+
+    printStr(str, 0);
 
 
 
