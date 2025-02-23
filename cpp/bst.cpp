@@ -33,6 +33,16 @@ public:
 	}
 
 	void insert(int data) {
+		// Node * newNode = new Node(data);
+	}
+
+	void dfs(Node * n, int key) {
+
+		if (n->data < key or n->data == key) {
+			// go left
+		} else {
+			// go right
+		}
 
 	}
 
