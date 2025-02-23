@@ -1,8 +1,25 @@
 #include <iostream>
 #include <string>
+#include <map>
+#include <algorithm>
 using namespace std;
 
-void reverseStr(string s, int i) {
+// void reverseStr(string s, int i) {
+//     // base case
+
+//     if (i == s.size() - 1) {
+//         // we're at the last char
+//         cout << s[i];
+//         return;
+//     }
+
+//     // recursive case
+//     reverseStr(s, i + 1);
+//     cout << s[i];
+
+// }
+
+void printStr(string s, int i) {
     // base case
 
     if (i == s.size() - 1) {
@@ -11,26 +28,70 @@ void reverseStr(string s, int i) {
         return;
     }
 
-    // recursive case
-    reverseStr(s, i + 1);
     cout << s[i];
+    // recursive case
+    printStr(s, i + 1);
 
-}
+};
 
-void printStr(string s, int i) {
-    // base case
+bool customCompare(int a, int b) {
+    return a > b;
+};
 
-    if (i == s.size() - 1) {
-        // we're at the last char
-        cout << i;
-        return;
+bool checkAnagrams(string one, string two) {
+
+    map<char, int> m1, m2;
+
+    for (auto x : one) {
+        m1[x]++;
+
     }
 
-    cout << i;
-    // recursive case
-    reverseStr(s, i + 1);
+    for (auto x : two) {
+        m2[x]++;
+    }
 
-}
+    for (auto x : m1) {
+        if (m2[x.first] == x.second) {
+            continue;
+        } else {
+            return false;
+        }
+    }
+
+    return true;
+
+    // for (auto x : m2) {
+    //     cout << x.first;
+    // }
+
+};
+
+int mostOccurence(string s, char key) {
+
+    char ans;
+    char largest = -1;
+
+    int n = s.size();
+    map<char, int> m;
+
+    for (auto x : s) {
+        m[x]++;
+    }
+
+    // sort(m.begin(), m.end(), customCompare);
+
+
+    for (auto x : m) {
+        // cout << x.first << " : " << x.second << endl;
+        if (x.second > largest) {
+            ans = x.first;
+            largest = x.second;
+        }
+    }
+
+    return ans;
+};
 
 
 
@@ -52,16 +113,31 @@ int main() {
     // q. jeez when u will do this?
     // if u can't solve these everything is useless
 
-    string str = "HelloEveryone";
+    string str = "ameG";
+    string str2 = "Gaem";
+
+    bool ans = checkAnagrams(str, str2);
+    cout << ans;
+
     // string ans;
-    int count = 1;
+    // int count = 1;
+
+    // char ans = mostOccurence(str, 'e');
+
+    // cout << ans;
+
+    // can u find anagram?
 
     // reverse a string using rec
     // reverseStr(sstr, 0);
 
     // cout << endl;
 
-    printStr(str, 0);
+    // printStr(str, 0);
+
+    // find the most occurence of char..
+
+
 
 
 
