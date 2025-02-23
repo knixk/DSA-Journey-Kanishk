@@ -2,6 +2,38 @@
 #include <string>
 using namespace std;
 
+void reverseStr(string s, int i) {
+    // base case
+
+    if (i == s.size() - 1) {
+        // we're at the last char
+        cout << s[i];
+        return;
+    }
+
+    // recursive case
+    reverseStr(s, i + 1);
+    cout << s[i];
+
+}
+
+void printStr(string s, int i) {
+    // base case
+
+    if (i == s.size() - 1) {
+        // we're at the last char
+        cout << s[i];
+        return;
+    }
+
+    cout << s[i];
+    // recursive case
+    reverseStr(s, i + 1);
+
+}
+
+
+
 int main() {
 
     #ifndef ONLINE_JUDGE
@@ -23,6 +55,11 @@ int main() {
     string str = "HelloEveryone";
     string ans;
     int count = 1;
+
+    // reverse a string using rec
+    reverseStr(str, 0);
+
+
 
     // for (char x : str) {
     //     // cout << x;
