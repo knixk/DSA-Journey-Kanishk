@@ -5,7 +5,11 @@ int main() {
 
 	string s = "ab cd ef";
 
-	string sr = "a1b2 c3d4 e5f6";
+	string b;
+	// getline >> b
+	
+
+	// string sr = "a1b2 c3d4 e5f6";
 
 
 	return 0;

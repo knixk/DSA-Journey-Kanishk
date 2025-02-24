@@ -18,7 +18,7 @@ public:
 		right = r;
 	}
 
-}
+};
 
 
 // class of bst
@@ -47,7 +47,7 @@ public:
 	}
 
 
-}
+};
 
 
 
