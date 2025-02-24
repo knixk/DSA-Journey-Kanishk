@@ -30,6 +30,7 @@ class LinkedList {
 
 
     LinkedList() {
+        head = NULL;
         cout << "LL created" << endl;
     }
 
@@ -38,31 +39,46 @@ class LinkedList {
 
         if (head == NULL) {
             // create a new node with data
-            Node * temp = new Node(d, NULL);            
+            Node * temp = new Node(d, NULL);     
+            head = temp;       
+            return;
         }
 
+
+        // basically storing the address of head in a temp * var (pointer)
         Node * temp = head;
 
+        // finding the end of the ll
         while (temp->next != NULL) {
             temp = temp->next;
         }
 
+        // creating a new node
         Node * newNode = new Node(d);
 
 
-        // add the node at the right location,
+        // add the node at the right location, (get it? right xD)
         temp->next = newNode;
 
         cout << "Inserted";
 
     }
 
+
     void print() {
+
         Node * temp = head;
+        // while the pointer is not null, advance it by one each time and print the value
         while (temp) {
             cout << temp->data << " -> ";
             temp = temp->next;
         }
+    }
+
+    // can you implement remove? Very basic operation
+
+    void remove() {
+        
     }
 
 };
@@ -81,6 +97,15 @@ int main() {
      */
 
     LinkedList ll;
+
+    ll.add(10);
+    ll.add(11);
+    ll.add(12);
+    ll.add(13);
+    ll.add(14);
+
+    ll.print();
+
 
 
 
