@@ -77,8 +77,13 @@ class LinkedList {
 
     // can you implement remove? Very basic operation
 
-    void remove() {
-        
+    void remove(int pos) {
+        Node * temp = head;
+        int tracker = 0;
+
+        if (pos == tracker) {
+            head = head->next;
+        }
     }
 
 };
