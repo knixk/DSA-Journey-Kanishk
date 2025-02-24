@@ -12,7 +12,33 @@ int main() {
 
     /*
     Notes:
+    input was like this:
 
+        1
+        +
+        2
+        y
+        -
+        20
+        n
+
+    output was like this:
+
+        Enter first num: 
+        enter operator: (+, -) 
+        Enter next number: 
+        3
+        Do you want to add more? 
+        enter operator: (+, -) 
+        Enter next number: 
+        -19
+        Do you want to add more? 
+
+        SUMMARY:
+        basically we have two ints, and one operator which is a char,
+        we use a while loop, to iterate forever until the users wants to do some operations:
+        we use a switch statement to manually do the operation,
+        we cout the ans and ask to continue or end, that's it
      */
 
     int a, b;
