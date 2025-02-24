@@ -9,10 +9,11 @@ NOTE:
 
 
 class Node {
+    public:
+
     int data;
     Node * next;
 
-public:
 
     Node(int d = -1, Node * n = NULL) {
         data = d;
@@ -22,9 +23,11 @@ public:
 
 class LinkedList {
 
+    public:
+
+
     Node * head;
 
-    public:
 
     LinkedList() {
         cout << "LL created" << endl;
@@ -44,7 +47,7 @@ class LinkedList {
             temp = temp->next;
         }
 
-        Node * newNode = newNode(d);
+        Node * newNode = new Node(d);
 
 
         // add the node at the right location,
@@ -57,7 +60,7 @@ class LinkedList {
     void print() {
         Node * temp = head;
         while (temp) {
-            cout << temp.data << " -> ";
+            cout << temp->data << " -> ";
             temp = temp->next;
         }
     }

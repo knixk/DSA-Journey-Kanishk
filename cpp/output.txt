@@ -1,9 +1,1 @@
-Enter first num: 
-enter operator: (+, -) 
-Enter next number: 
-3
-Do you want to add more? 
-enter operator: (+, -) 
-Enter next number: 
--19
-Do you want to add more? 
+LL created
