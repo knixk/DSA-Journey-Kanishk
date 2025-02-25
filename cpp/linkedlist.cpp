@@ -78,12 +78,19 @@ class LinkedList {
     // can you implement remove? Very basic operation
 
     void remove(int pos) {
-        Node * temp = head;
         int tracker = 0;
 
+        /* if we're add position 0, simply make the head
+        point to the next node,
+        but who will delete this first node? 
+        */
         if (pos == tracker) {
             head = head->next;
         }
+
+        Node * temp = head;
+
+
     }
 
 };
