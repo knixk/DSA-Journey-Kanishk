@@ -1,3 +1,26 @@
+
+/* 
+Note:
+problem is from leetcode
+
+given roman charaters,
+convert it into a legibal decimal vesrion right..
+
+so we basically have a formula
+
+if the character at left is greater than right,
+simply add
+
+if the charatcter at left is less than right
+subtract it from right..
+
+
+
+I think we might have got this incomplete
+
+*/
+
+
     class Solution {
     public:
         int romanToInt(string s) {

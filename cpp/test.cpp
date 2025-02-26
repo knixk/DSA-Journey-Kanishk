@@ -6,6 +6,16 @@
 using namespace std;
 
 
+/*
+NOTE: 
+lower_bound(takes arr begin, arr end, key to find)
+
+returns the first index it finds,
+
+Q. how would you find the second occur?
+
+ */
+
 int main() {
     #ifndef ONLINE_JUDGE
     freopen("input.txt","r",stdin);
