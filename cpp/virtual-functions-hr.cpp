@@ -5,6 +5,45 @@
 #include <algorithm>
 using namespace std;
 
+/*
+NOTE:
+basically we were asked to create three classes,
+person, student and prof,
+
+each have a name and age,
+
+right...
+
+but professor has pubs and cur_id of prof
+
+similary
+
+class is written in small letters
+
+constructor is written with the same name of class
+
+class abc {
+    private:
+    public:  
+    abc() {
+    
+    }
+
+    // getters
+    // setters
+
+    friend etc etc
+}
+
+student has a cur id,
+and an arr of marks of diff subjects
+we use the symbol 
+classA : (means to inherit from) classB {
+    
+}
+
+ */
+
 class Person {
     private:
     
