@@ -33,10 +33,14 @@ but it has AM, then simply call it that,
 
 
 
+
+
 */
 
 string timeConversion(string s) {
-
+    string s;
+    string t;
+    getline(cin, s, t);
 }
 
 int main()
