@@ -16,9 +16,12 @@ vector<string> split(const string &);
 Note: You can make as long notes, no one would care..
 so..
 
+taking a note is very crucial to maintain the understanding,
+when u revisit a problem
+
 1. basically we calculated the count of each p, n and z's
 
-2. then we found the ratio.. of each by divided by length of arr
+2. then we found the ratio.. of each by dividing the length of arr
 
 we were getting err, as 0, becz our n was an int, so the ans was also becoming an int, it seems,
 so we divided by a float, made our n a float.

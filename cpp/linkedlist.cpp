@@ -3,6 +3,7 @@ using namespace std;
 
 /*
 NOTE:
+making a note is very crucial because the context gets lost very quickly.
 Complete this method pls
 
  */
