@@ -1,6 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/* 
+NOte: basically the question was asking us to return the element which only 
+appeared once,
+so what we did is..
+
+created a map<int, int> m,
+
+looped over and incremented the values at keys, if found,
+
+next simply, 
+
+after we loop  over it with, using the auto iterator,
+
+if we foud the x.second as to be one,
+we simply got the answer, and we set it to x.first, break the loop
+and return the ans,
+
+
+works..
+
+*/
 
 int lonelyinteger(vector<int> a) {
     map<int, int> m;
