@@ -13,6 +13,38 @@ vector<string> split(const string &);
  * The function accepts 2D_INTEGER_ARRAY arr as parameter.
  */
 
+/*
+NOTE: 
+ok dude,
+so what we did is
+let's imagine this matrix
+
+
+           col 1  col 2  col 3
+           ^      ^      ^
+row 1 >    1      2      3
+row 2 >    2      2      1
+row 3 >    1      1      1 
+
+we need to find the left diag, sum,
+right diag sum,
+
+and the abs diff  of both
+
+right..
+
+we have used a while loop here
+
+iterated from left top to right bottom,
+with i and j,
+
+and right top to left bottom 
+with p and q,
+
+
+we have used the abs() function, which returns a postitive int always
+ */
+
 int diagonalDifference(vector<vector<int>> arr) {
     // number of rows and cols,
     int n = arr.size();
@@ -39,10 +71,10 @@ int diagonalDifference(vector<vector<int>> arr) {
     int rsum = 0;
 
     while (p < n and q >= 0) {
-        int digit = arr[i][j];
+        int digit = arr[p][q];
         rsum += digit;
-        i++;
-        j--;
+        p++;
+        q--;
     }
 
     int absDiff = abs(rsum - lsum);
