@@ -20,7 +20,7 @@ int main() {
     string s;
     getline(cin, s);
 
-    cout << s[0] << s[1] << s[2];
+    cout << s[1] << s[2];
 
     // cout << s;
     stringstream ss(s);
