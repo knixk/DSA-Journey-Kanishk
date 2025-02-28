@@ -1,5 +1,5 @@
 /*
-NOTE: very imp to remember context
+NOTE: !!!!very imp to remember context
 problem name:
 Longest Substring Without Repeating Characters
 link:
@@ -13,7 +13,7 @@ Output: 3
 Explanation: The answer is "abc", with the length of 3.
 
 
-NOTE2: basically we wanted to return the long substring, without repeating
+!!!!!! NOTE2: basically we wanted to return the longest substring, without repeating
 characters,
 
 we used two loops,
