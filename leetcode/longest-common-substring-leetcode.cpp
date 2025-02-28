@@ -1,17 +1,10 @@
 class Solution {
 public:
 
-    // void fillMap(map<char, int> & m, string & s, int n) {
-
-    //     for (int = 0; i < n; i++) {
-
-    //     }
-    // }
-
     int lengthOfLongestSubstring(string s) {
         map<char, int> m;
         int n = s.size();
-        int maxCount;
+        int maxCount = INT_MIN;
 
         for (int i = 0; i < n; i++) {
             int curCount = 0;
@@ -20,6 +13,8 @@ public:
                 if (!m[curChar]) {
                     // i want to add
                     m[curChar]++;
+                    curCount++;
+                    maxCount = max(curCount, maxCount);
                 } else if (m[j] > 1) {
                     // i want to clear hashmap and break this j loop
                     m.clear();
@@ -28,6 +23,8 @@ public:
 
             }
         }
+
+        return maxCount;
 
 
     }
