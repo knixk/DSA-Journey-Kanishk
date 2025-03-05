@@ -18,7 +18,6 @@ which means it X doesnt has more than two factors..
 
 bool checkPrime(int n) {
 
-
 	if (n <= 1) {
 		return false;
 	}
@@ -64,7 +63,7 @@ int main() {
 
 	for (int i = 1; i <= N; i++) {
 
-		if (checkPrime(N)) {
+		if (checkPrime(i)) {
 			cout << i << " is prime" << endl;
 		}
 
