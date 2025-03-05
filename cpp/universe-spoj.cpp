@@ -1,6 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+/*
+NOTE: basically we were asked to print whatever number is given,
+otherwise stop at 42
+
+simple as that
+
+we use a white loop that runs forever
+ */
+
 int main() {
 
 
@@ -13,11 +23,15 @@ int main() {
 	int t;
 	while (true) {
 		cin >> t;
-		cout << t << endl;
 		if (t == 42) {
 			break;
 		}
+		cout << t << endl;
+
 	}
 	
 	return 0;
 }
+
+
+// works
