@@ -1,13 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/* */
 
-void recursive_find(int goal, int & cur, int & a, int & b, int & c, char inc) {
+/*
+
+NOTE2:
+
+Basically im trying to find three factors which would sum upto a number N,
+incrementing the count of each a, b, c, which is 2, 3, 5s..
+
+
+
+if 180: 2 x 2 x 3 x 3 x 5
+
+
+ */
+
+
+void recursive_find(int goal, int & cur, int & a, int & b, int & c, char inc, int & depth) {
+        depth++;
  	if (cur == goal) {
- 		cout << "ans found \n";
+ 		// cout << "ans found \n";
         // do some changes here  
-        cout << a << " " << b << " " << c;
+        // cout << a << " " << b << " " << c;
  		return;
  	}
 
@@ -67,18 +82,18 @@ void recursive_find(int goal, int & cur, int & a, int & b, int & c, char inc) {
         }
     }
 
- 	recursive_find(goal, cur, a, b, c, 'a');
+ 	recursive_find(goal, cur, a, b, c, 'a', depth);
 
     // if (goal == cur) {
     //     return;
     // }
 
- 	recursive_find(goal, cur, a, b, c, 'b');
+ 	recursive_find(goal, cur, a, b, c, 'b', depth);
 
     // if (goal == cur) {
     //     return;
     // }
- 	recursive_find(goal, cur, a, b, c, 'c');
+ 	recursive_find(goal, cur, a, b, c, 'c', depth);
 
  }
 
@@ -93,8 +108,11 @@ void recursive_find(int goal, int & cur, int & a, int & b, int & c, char inc) {
     int twos = 0, threes = 0, fives = 0;
     char inc = 'n';
     int N = 180;
+    int depth = 0;
     // suppose new_val is 180
-    recursive_find(N, current, twos, threes, fives, inc);
+    recursive_find(N, current, twos, threes, fives, inc, depth);
+
+    cout << depth;
 
 
     return 0;
