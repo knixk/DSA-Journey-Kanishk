@@ -21,7 +21,8 @@ if 180: 2 x 2 x 3 x 3 x 5
  */
 
 
-#include<iostream>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -106,86 +107,42 @@ class D
 		 	val = 1;
 		 }
 
-		 void recursive_find(int goal, int & cur, int & a, int & b, int & c, char inc) {
-		 	if (cur == goal) {
-		 		cout << "ans found \n";
+        void recursive_find(int goal, int cur, int a, int b, int c, char inc, vector <int> & ans) {
+            if (cur == goal) {
+                // cout << "ans found \n";
                 // do some changes here  
-                cout << a << " " << b << " " << c;
-		 		return;
-		 	}
-
-		 	if (cur > goal) {
-		 		// we need to backtrack this..
-                if (inc == 'a') {
-                    cur /= 2;
-                    a--;
-                }
-
-                if (inc == 'b') {
-                 cur /= 3;
-                    b--;   
-                }
-
-                if (inc == 'c') {
-                    cur /= 5;
-                    c--;
-                }
-
-		 		return;
-		 	}
-
-            if (cur == 0) {
-                switch (inc) {
-                    case 'a':
-                        cur = 2;
-                        a++
-                        break;
-                    case 'b':
-                        cur = 3;
-                        b++;
-                        break;
-                    case 'c';
-                        cur = 5;
-                        c++;
-                        break;
-                    default:
-                        break;
-                }
-            } else {
-                switch (inc) {
-                    case 'a':
-                        cur *= 2;
-                        a++;
-                        break;
-                    case 'b':
-                        cur *= 3;
-                        b++;
-                        break;
-                    case 'c';
-                        cur *= 5;
-                        c++;
-                        break;
-                    default:
-                        break;
-                }
+                // cout << a << ", " << b << ", " << c << endl;
+                ans[0] = a;
+                ans[1] = b;
+                ans[2] = c;
+                return;
             }
 
-		 	recursive_find(goal, cur, a, b, c, 'a');
-		 	recursive_find(goal, cur, a, b, c, 'b');
-		 	recursive_find(goal, cur, a, b, c, 'c');
+            if (cur > goal) {
+                return;
 
+            }
 
-		 }
+            // make three recursive calls
+            recursive_find(goal, cur * 5, a, b, c + 1, 'c', depth, ans);
+            recursive_find(goal, cur * 3, a, b + 1, c, 'b', depth, ans);
+            recursive_find(goal, cur * 2, a + 1, b, c, 'a', depth, ans);
+         }
 
 
 		 //Implement this function
 		 void update_val(int new_val)
 		 {
-		 	int current = 0;
-		 	int twos = 0, threes = 0, fives = 0;
-		 	char inc = 'n';
+            vector<int> ans;
+            int current = 1;
+            int twos = 0, threes = 0, fives = 0;
+            char inc = 'n';
+            // int N = 180;
+            int depth = 0;
             // suppose new_val is 180
-		 	recursive_find(new_val, current, twos, threes, fives, inc);
+            recursive_find(new_val, current, twos, threes, fives, inc, depth, ans);
+
+
 			
 		 }
 		 //For Checking Purpose
