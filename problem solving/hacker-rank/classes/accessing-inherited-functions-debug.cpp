@@ -17,83 +17,64 @@ if 180: 2 x 2 x 3 x 3 x 5
  */
 
 
-void recursive_find(int goal, int & cur, int & a, int & b, int & c, char inc, int & depth) {
+void recursive_find(int goal, int cur, int a, int b, int c, char inc, int & depth) {
         depth++;
  	if (cur == goal) {
  		// cout << "ans found \n";
         // do some changes here  
-        // cout << a << " " << b << " " << c;
+        cout << a << " " << b << " " << c;
  		return;
  	}
 
- 	if (cur > goal) {
- 		// we need to backtrack this..
-        if (inc == 'a') {
-            cur /= 2;
-            a--;
-        }
+    // Make changes
+    // if (cur == 0) {
+    //     switch (inc) {
+    //         case 'a':
+    //             cur = 2;
+    //             a++;
+    //             break;
+    //         case 'b':
+    //             cur = 3;
+    //             b++;
+    //             break;
+    //         case 'c':
+    //             cur = 5;
+    //             c++;
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    // } else {
+    //     switch (inc) {
+    //         case 'a':
+    //             cur *= 2;
+    //             a++;
+    //             break;
+    //         case 'b':
+    //             cur *= 3;
+    //             b++;
+    //             break;
+    //         case 'c':
+    //             cur *= 5;
+    //             c++;
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    // }
 
-        if (inc == 'b') {
-         cur /= 3;
-            b--;   
-        }
-
-        if (inc == 'c') {
-            cur /= 5;
-            c--;
-        }
-
- 		return;
- 	}
-
-    if (cur == 0) {
-        switch (inc) {
-            case 'a':
-                cur = 2;
-                a++;
-                break;
-            case 'b':
-                cur = 3;
-                b++;
-                break;
-            case 'c':
-                cur = 5;
-                c++;
-                break;
-            default:
-                break;
-        }
-    } else {
-        switch (inc) {
-            case 'a':
-                cur *= 2;
-                a++;
-                break;
-            case 'b':
-                cur *= 3;
-                b++;
-                break;
-            case 'c':
-                cur *= 5;
-                c++;
-                break;
-            default:
-                break;
-        }
-    }
-
- 	recursive_find(goal, cur, a, b, c, 'a', depth);
+ 	recursive_find(goal, cur, a + 1, b, c, 'a', depth);
 
     // if (goal == cur) {
     //     return;
     // }
 
- 	recursive_find(goal, cur, a, b, c, 'b', depth);
+ 	recursive_find(goal, cur, a, b + 1, c, 'b', depth);
 
     // if (goal == cur) {
     //     return;
     // }
- 	recursive_find(goal, cur, a, b, c, 'c', depth);
+ 	recursive_find(goal, cur, a, b, c + 1, 'c', depth);
 
  }
 
