@@ -33,13 +33,13 @@ void recursive_find(int goal, int & cur, int & a, int & b, int & c, char inc) {
         switch (inc) {
             case 'a':
                 cur = 2;
-                a++
+                a++;
                 break;
             case 'b':
                 cur = 3;
                 b++;
                 break;
-            case 'c';
+            case 'c':
                 cur = 5;
                 c++;
                 break;
@@ -56,7 +56,7 @@ void recursive_find(int goal, int & cur, int & a, int & b, int & c, char inc) {
                 cur *= 3;
                 b++;
                 break;
-            case 'c';
+            case 'c':
                 cur *= 5;
                 c++;
                 break;
@@ -81,6 +81,11 @@ void recursive_find(int goal, int & cur, int & a, int & b, int & c, char inc) {
  }
 
  int main() {
+
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt","r",stdin);
+    freopen("output.txt","w",stdout); 
+    #endif
 
     int current = 0;
     int twos = 0, threes = 0, fives = 0;
