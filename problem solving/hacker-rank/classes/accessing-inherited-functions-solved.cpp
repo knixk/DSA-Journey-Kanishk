@@ -1,6 +1,28 @@
 #include <iostream>
 using namespace std;
 
+
+/*
+
+LOGIC:
+
+🔑 Logic in Simple Steps
+
+1. Start with val = 1.
+2. You want to turn val into new_val using only factors 2, 3, 5.
+3. Check how many times new_val can be divided by 2, 3, 5.
+4. For each division, call the corresponding func() (A for 2, B for 3, C for 5).
+5. Each func() multiplies val and tracks how many times it was called.
+6. When val equals new_val, you're done.
+
+
+Unless u solve hard problems, by yorself.. fully understand it...
+you can never learn problem solving.
+
+
+
+ */
+
 // Base class A - Multiplies by 2
 class A {
 public:
