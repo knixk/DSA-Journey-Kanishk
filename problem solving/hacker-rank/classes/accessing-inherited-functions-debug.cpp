@@ -67,15 +67,15 @@ void recursive_find(int goal, int & cur, int & a, int & b, int & c, char inc) {
 
  	recursive_find(goal, cur, a, b, c, 'a');
 
-    if (goal == cur) {
-        return;
-    }
+    // if (goal == cur) {
+    //     return;
+    // }
 
  	recursive_find(goal, cur, a, b, c, 'b');
 
-    if (goal == cur) {
-        return;
-    }
+    // if (goal == cur) {
+    //     return;
+    // }
  	recursive_find(goal, cur, a, b, c, 'c');
 
  }
