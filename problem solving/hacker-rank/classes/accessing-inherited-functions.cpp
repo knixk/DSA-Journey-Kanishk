@@ -108,7 +108,9 @@ class D
 
 		 void recursive_find(int goal, int & cur, int & a, int & b, int & c, char inc) {
 		 	if (cur == goal) {
-		 		cout << "ans found";
+		 		cout << "ans found \n";
+                // do some changes here  
+                cout << a << " " << b << " " << c;
 		 		return;
 		 	}
 
@@ -135,33 +137,37 @@ class D
             if (cur == 0) {
                 switch (inc) {
                     case 'a':
-                        a = 2;
+                        cur = 2;
+                        a++
                         break;
                     case 'b':
-                        b = 3;
+                        cur = 3;
+                        b++;
                         break;
                     case 'c';
-                        c = 5;
+                        cur = 5;
+                        c++;
                         break;
                     default:
                         break;
                 }
             } else {
-                if (cur == 0) {
-                    switch (inc) {
-                        case 'a':
-                            a = 2;
-                            break;
-                        case 'b':
-                            b = 3;
-                            break;
-                        case 'c';
-                            c = 5;
-                            break;
-                        default:
-                            break;
-                    }
-                 }
+                switch (inc) {
+                    case 'a':
+                        cur *= 2;
+                        a++;
+                        break;
+                    case 'b':
+                        cur *= 3;
+                        b++;
+                        break;
+                    case 'c';
+                        cur *= 5;
+                        c++;
+                        break;
+                    default:
+                        break;
+                }
             }
 
 		 	recursive_find(goal, cur, a, b, c, 'a');
