@@ -10,6 +10,13 @@ https://www.hackerrank.com/challenges/accessing-inherited-functions/problem?isFu
 NOTE2:
 time started: 4:20pm
 
+Basically im trying to find three factors which would sum upto a number N,
+incrementing the count of each a, b, c, which is 2, 3, 5s..
+
+
+
+if 180: 2 x 2 x 3 x 3 x 5
+
 
  */
 
@@ -99,7 +106,7 @@ class D
 		 	val = 1;
 		 }
 
-		 void recursive_find(int goal, int & cur, int & a, int & b, int & c) {
+		 void recursive_find(int goal, int & cur, int & a, int & b, int & c, char inc) {
 		 	if (cur == goal) {
 		 		cout << "ans found";
 		 		return;
@@ -107,13 +114,59 @@ class D
 
 		 	if (cur > goal) {
 		 		// we need to backtrack this..
+                if (inc == 'a') {
+                    cur /= 2;
+                    a--;
+                }
+
+                if (inc == 'b') {
+                 cur /= 3;
+                    b--;   
+                }
+
+                if (inc == 'c') {
+                    cur /= 5;
+                    c--;
+                }
 
 		 		return;
 		 	}
 
-		 	recursive_find(goal, cur * 2, a + 1, b, c, 'a');
-		 	recursive_find(goal, cur * 3, a, b + 1, c, 'b');
-		 	recursive_find(goal, cur * 5, a, b, c + 1, 'c');
+            if (cur == 0) {
+                switch (inc) {
+                    case 'a':
+                        a = 2;
+                        break;
+                    case 'b':
+                        b = 3;
+                        break;
+                    case 'c';
+                        c = 5;
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                if (cur == 0) {
+                    switch (inc) {
+                        case 'a':
+                            a = 2;
+                            break;
+                        case 'b':
+                            b = 3;
+                            break;
+                        case 'c';
+                            c = 5;
+                            break;
+                        default:
+                            break;
+                    }
+                 }
+            }
+
+		 	recursive_find(goal, cur, a, b, c, 'a');
+		 	recursive_find(goal, cur, a, b, c, 'b');
+		 	recursive_find(goal, cur, a, b, c, 'c');
 
 
 		 }
@@ -125,7 +178,8 @@ class D
 		 	int current = 0;
 		 	int twos = 0, threes = 0, fives = 0;
 		 	char inc = 'n';
-		 	recursive_find(new_val, current, twos, threes, fives);
+            // suppose new_val is 180
+		 	recursive_find(new_val, current, twos, threes, fives, inc);
 			
 		 }
 		 //For Checking Purpose
