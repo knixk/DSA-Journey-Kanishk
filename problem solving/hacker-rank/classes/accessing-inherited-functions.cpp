@@ -101,18 +101,19 @@ class D
 
 		 void recursive_find(int goal, int & cur, int & a, int & b, int & c) {
 		 	if (cur == goal) {
-		 		cout << "ans found"
+		 		cout << "ans found";
 		 		return;
 		 	}
 
 		 	if (cur > goal) {
 		 		// we need to backtrack this..
+
 		 		return;
 		 	}
 
-		 	recursive_find(goal, cur * 2, a + 1, b, c);
-		 	recursive_find(goal, cur * 3, a, b + 1, c);
-		 	recursive_find(goal, cur * 5, a, b, c + 1);
+		 	recursive_find(goal, cur * 2, a + 1, b, c, 'a');
+		 	recursive_find(goal, cur * 3, a, b + 1, c, 'b');
+		 	recursive_find(goal, cur * 5, a, b, c + 1, 'c');
 
 
 		 }
@@ -123,6 +124,7 @@ class D
 		 {
 		 	int current = 0;
 		 	int twos = 0, threes = 0, fives = 0;
+		 	char inc = 'n';
 		 	recursive_find(new_val, current, twos, threes, fives);
 			
 		 }
