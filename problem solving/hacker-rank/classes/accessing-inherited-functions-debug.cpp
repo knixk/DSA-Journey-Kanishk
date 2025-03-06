@@ -13,6 +13,12 @@ incrementing the count of each a, b, c, which is 2, 3, 5s..
 
 if 180: 2 x 2 x 3 x 3 x 5
 
+ok notice, we are not doing back tracking but it works!
+why?
+since we're only just sending it as a copy, 
+when the function call returns, it automatically
+makes it to the previous value..
+then call the next function.
 
  */
 
@@ -22,60 +28,19 @@ void recursive_find(int goal, int cur, int a, int b, int c, char inc, int & dept
  	if (cur == goal) {
  		// cout << "ans found \n";
         // do some changes here  
-        cout << a << " " << b << " " << c;
+        cout << a << ", " << b << ", " << c << endl;
  		return;
  	}
 
-    // Make changes
-    // if (cur == 0) {
-    //     switch (inc) {
-    //         case 'a':
-    //             cur = 2;
-    //             a++;
-    //             break;
-    //         case 'b':
-    //             cur = 3;
-    //             b++;
-    //             break;
-    //         case 'c':
-    //             cur = 5;
-    //             c++;
-    //             break;
-    //         default:
-    //             break;
-    //     }
-    // } else {
-    //     switch (inc) {
-    //         case 'a':
-    //             cur *= 2;
-    //             a++;
-    //             break;
-    //         case 'b':
-    //             cur *= 3;
-    //             b++;
-    //             break;
-    //         case 'c':
-    //             cur *= 5;
-    //             c++;
-    //             break;
-    //         default:
-    //             break;
-    //     }
-    // }
+    if (cur > goal) {
+        return;
 
- 	recursive_find(goal, cur, a + 1, b, c, 'a', depth);
+    }
 
-    // if (goal == cur) {
-    //     return;
-    // }
-
- 	recursive_find(goal, cur, a, b + 1, c, 'b', depth);
-
-    // if (goal == cur) {
-    //     return;
-    // }
- 	recursive_find(goal, cur, a, b, c + 1, 'c', depth);
-
+    // make three recursive calls
+    recursive_find(goal, cur * 5, a, b, c + 1, 'c', depth);
+    recursive_find(goal, cur * 3, a, b + 1, c, 'b', depth);
+    recursive_find(goal, cur * 2, a + 1, b, c, 'a', depth);
  }
 
  int main() {
@@ -85,7 +50,7 @@ void recursive_find(int goal, int cur, int a, int b, int c, char inc, int & dept
     freopen("output.txt","w",stdout); 
     #endif
 
-    int current = 0;
+    int current = 1;
     int twos = 0, threes = 0, fives = 0;
     char inc = 'n';
     int N = 180;
@@ -93,7 +58,7 @@ void recursive_find(int goal, int cur, int a, int b, int c, char inc, int & dept
     // suppose new_val is 180
     recursive_find(N, current, twos, threes, fives, inc, depth);
 
-    cout << depth;
+    // cout << depth;
 
 
     return 0;
