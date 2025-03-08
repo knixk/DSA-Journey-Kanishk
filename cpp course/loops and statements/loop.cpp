@@ -24,7 +24,7 @@
 
 		// Check if a number is prime or not
 		if (n == 2) {
-			return true;
+			return true;x
 		}
 
 		if (n % 2 == 0) {

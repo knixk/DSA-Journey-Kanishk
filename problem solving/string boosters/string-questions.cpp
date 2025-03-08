@@ -32,7 +32,7 @@ int main() {
     */
 
     string s;
-    cin >> s;
+    cin >> s;    
 
     cout << s;
 
