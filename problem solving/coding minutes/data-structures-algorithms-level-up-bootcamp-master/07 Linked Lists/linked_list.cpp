@@ -1,6 +1,16 @@
 #include<iostream>
 using namespace std;
 
+
+
+/*
+NOTE:
+we had a class of node and ll (LinkedList)
+
+
+
+ */
+
 class node{
 public:
 	int data;
