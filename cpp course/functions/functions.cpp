@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 
@@ -33,6 +34,12 @@ int sumOfNums(int a, int b) {
 
 int minusOfNums(int a, int b); // declaration
 
+// void weirdFn(char a, char b = 'k') {
+//     string ans = a + b;
+    
+//     cout << ans << endl;
+// }
+
 int main() {
 
     #ifndef ONLINE_JUDGE
@@ -60,6 +67,10 @@ int main() {
 
     int ans2 = minusOfNums(a, b);
     cout << ans2 << endl;
+
+    // Q. can u use default args?
+    // char a = 'e';
+    // weirdFn(a);
 
 
 
