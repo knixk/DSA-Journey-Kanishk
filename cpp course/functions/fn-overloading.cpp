@@ -19,13 +19,15 @@ BUT TO DIFFERENTIATE B/W OTHERS,
 
 THEIR ARGS SHOULD ALSO BE UNIQUE
 */
-int add(int a, int b) {
-    return a + b;
+float add(int a, int b) {
+    return (a + b);
 }
 
-float add(float a, float b) {
-    return a + b;
-}
+// float add(float a, float b) {
+//     return a + b;
+// }
+
+
 
 
 // not sure how to work on this
@@ -75,8 +77,11 @@ int main() {
     gamer(ff);
     gamer(a, b);
 
+    // how it was float huh?
+    cout << add(5, 9);
 
-    gamer();
+    // ok cool,\
 
+    // he called diff functiosn for different options, that cute
 	return 0;
 }
