@@ -4,7 +4,11 @@ using namespace std;
 
 /* 
 NOTE:
+!IMPORTANT:
+It's very crucial to make a note,
+otherwise the context gets lost in air..
 
+have to start all over again..
 */
 
 int main() {

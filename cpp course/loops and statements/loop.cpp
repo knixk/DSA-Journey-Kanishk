@@ -3,6 +3,13 @@
 	using namespace std;
 
 	/*
+
+	!This code has a BUG
+
+	for some reason, the execution stop after the numbers
+	6, 
+	Identify the cause and fix it.
+
 	NOTE: damn it seems like i've gotten stuck even here.. jeez
 
 	a prime is basically has factors,
@@ -24,7 +31,7 @@
 
 		// Check if a number is prime or not
 		if (n == 2) {
-			return true;x
+			return true;
 		}
 
 		if (n % 2 == 0) {
