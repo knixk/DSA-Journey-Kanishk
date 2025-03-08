@@ -36,11 +36,28 @@ int main() {
     while(t--) {
         int n; cin >> n;
         vector<int> arr;
-        int temp; cin >> temp;
-        arr.push_back(temp);
+        vector<int> ans;
+        
+        while (n--) {
+            int temp; cin >> temp;
+            arr.push_back(temp);
+        }
         
         // do some transformation
-        
+        arr.sort(arr.begin(), arr.end());
+
+        // if u use ( n + 1 ) / 2, it will always find the middle idx
+        // basically the mid point, -1 to get the index
+        int k = (arr.size() + 1) / 2;
+        --k;
+
+        for (int i = 0; i < k; i++) {
+
+        }
+
+        for (int j = n - 1; i <= k; i++) {
+
+        }
         
         // print the ans arr     
         
