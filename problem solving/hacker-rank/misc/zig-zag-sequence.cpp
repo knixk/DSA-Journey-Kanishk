@@ -10,6 +10,15 @@ NOTE:
 problem link:
 https://www.hackerrank.com/challenges/one-week-preparation-kit-zig-zag-sequence/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-three
 
+problem says sort the arr,
+
+make the first half, as ascending order
+second half as descending order
+
+in the middle put the largest element,
+
+that's it
+
 basically u have let's say an arr
 1 3 10 5 6
 sort it
