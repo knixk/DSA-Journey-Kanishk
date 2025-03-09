@@ -70,7 +70,7 @@ int main() {
         int k = (n + 1) / 2;
 
         // don't subtract from k, no need
-        // --k;
+        --k;
 
 
         // swap the last character with k, as it has to be the most large element
@@ -92,7 +92,7 @@ int main() {
         }
 
 
-        // ans.push_back(arr[n - 1]);
+        ans.push_back(arr[n - 1]);
         
         // print the ans arr     
         for (auto x : ans) {
