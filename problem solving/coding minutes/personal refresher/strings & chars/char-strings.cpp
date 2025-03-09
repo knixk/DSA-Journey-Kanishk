@@ -45,7 +45,7 @@ int main() {
 
     // Q. USE CIN to take input an char arr
 
-    cout << endl;
+    cout << endl;   
 
     char carr3[100];
     cin >> carr3;
