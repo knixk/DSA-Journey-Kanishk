@@ -43,6 +43,20 @@ int main() {
     // gives one more, becz of null char , 4
     cout << sizeof(carr);
 
+    // Q. USE CIN to take input an char arr
+
+    cout << endl;
+
+    char carr3[100];
+    cin >> carr3;
+
+    cout << carr3 << endl;
+
+    // Q. what happens when u try to give input which has
+    // space?
+
+    // ans: it basically terminates before the space,
+    // storing only the vals before space
 
 
     return 0;
