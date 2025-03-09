@@ -7,6 +7,8 @@ using namespace std;
 
 /* 
 NOTE:
+problem link:
+https://www.hackerrank.com/challenges/one-week-preparation-kit-zig-zag-sequence/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-three
 
 basically u have let's say an arr
 1 3 10 5 6
@@ -19,7 +21,6 @@ what's k? ie  (n + 1) / 2  : basically midpoint
 loop over the first,
 
 loop over from end
-
 
 swap the midpoint with position at k,
 
@@ -51,12 +52,22 @@ int main() {
         int k = (arr.size() + 1) / 2;
         --k;
 
-        for (int i = 0; i < k; i++) {
 
+        // swap the last character with k, as it has to be the most large element
+        // create a temp var to store the digit, otherwise well lose it
+        int temp = arr[k];
+        arr[k] = arr[n - 1];
+        arr[n - 1] = temp;
+
+
+        // set the elements til and including k
+        for (int i = 0; i <= k; i++) {
+            ans.push_back(arr[i]);
         }
 
-        for (int j = n - 1; i <= k; i++) {
 
+        // set the elements til but excluding k from n - 1
+        for (int j = n - 2; j > k; i++) {
         }
         
         // print the ans arr     
