@@ -42,6 +42,10 @@ int main() {
 			char current = word[i];
 		}
 
+		// find the smallest put in the end
+
+		// so reverse is good
+
 
 
 
