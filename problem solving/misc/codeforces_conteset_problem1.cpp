@@ -34,15 +34,22 @@ int main() {
 			continue;
 		}
 
-		// let's try to make some swaps
+		/*
+		since the reverse is n't let's try to make some swaps and the n is not 0
+		to reverse a string:
+		   reverse(str.begin(), str.end());
+		 */
+		
 
-		char smallestChar = a;
+	    // Find the smallest character
+	    char smallestChar = *min_element(str.begin(), str.end());
 
-		for (int i = 0; i < n; i++) {
-			char current = word[i];
-		}
+	    
 
 		// find the smallest put in the end
+	    // let's try to sw
+	    for ()
+
 
 		// so reverse is good
 
