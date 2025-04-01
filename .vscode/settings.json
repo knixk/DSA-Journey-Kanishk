@@ -2,6 +2,9 @@
     "files.associations": {
         "utility": "cpp",
         "format": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "algorithm": "cpp",
+        "limits": "cpp",
+        "xutility": "cpp"
     }
 }
