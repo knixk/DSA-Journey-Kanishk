@@ -4,9 +4,22 @@ basically we're given an arr,
 and a target,
 
 
-basically we need to return the position where we should insert the ele
+basically we need to return the position of the elemt is present, otherwise where we should insert the ele
+
+we can solve this with binary search easily,
 
 
+if binary search couldn't find it,
+return the left pointer,
+as it contains the idx,
+
+why not right?
+
+it returned one less than the idx it should be present at so don't use right
+
+
+ummm since right is basically mid - 1,
+don't u think, that the idx would be worng?
 so let's try to iterate over the arr,
 we check if the cur letter is less than or equal this one, 
 if it is, then we increment, otherwise we need to return this idx
@@ -63,7 +76,7 @@ class Solution {
             // after this is exhausted and we couldn't find it,
             // basically left pointer contains our ans;
 
-            return right;
+            return left;
 
         }
     };
