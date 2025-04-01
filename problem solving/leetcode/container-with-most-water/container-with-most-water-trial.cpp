@@ -24,17 +24,43 @@ we'll think about optimizing this..
 class Solution {
     public:
         int maxArea(vector<int>& height) {
+
             int n = height.size();
 
-            int maxSoFar = INT_MIN;
+            int left_to_right_max = INT_MIN;
+            int ltr_idx = -1; // ltr is short for form left to right and rtl is opposite
 
-            for (int i = 0; i < n - 1; i++) {
-                for (int j = i + 1; j < n; j++) {
-                    int area = min(height[i], height[j]) * (j - i);
-                    maxSoFar = max(area, maxSoFar);
+            int right_to_left_max = INT_MIN;
+            int rtl_idx = -1;
+
+
+            for (int i = 0; i < n; i++) {
+                int cur = height[i];
+                // left_to_right_max = max(cur, left_to_right_max);
+                if (cur > left_to_right_max) {
+                    left_to_right_max = cur;
+                    ltr_idx = i;
+                }
+
+            }
+
+            for (int i = n - 1; i >= 0; i--) {
+                int cur = height[i];
+                // right_to_left_max = max(cur, right_to_left_max);
+                if (cur > right_to_left_max) {
+                    right_to_left_max = cur;
+                    rtl_idx = i;
                 }
             }
-        return maxSoFar;
+
+            int area = min(left_to_right_max, right_to_left_max) * (rtl_idx - ltr_idx);
+            return area;
+
+
+            /*
+            im sure i have done this before,
+            let's try to find the max for both towers
+            */
 
         }
 
@@ -46,7 +72,7 @@ class Solution {
 
     about the approach
 
-    we loop from 0 to n 0 1, as we don't want i at the last idx,
+    we loop i from 0 to < n - 1, as we don't want i at the last idx,
     otherwise area would be abosultey 0,
     similarly,
     we don't want our j to be before i, as it won't make sense, prolly it will be overlapping some other solution,
