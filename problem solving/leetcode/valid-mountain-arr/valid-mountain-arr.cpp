@@ -1,3 +1,5 @@
+// problem link: https://leetcode.com/problems/valid-mountain-array/description/
+
 /*
 so basically we're given this problem and we have to find if there is 
 a valid mountain arr in this ...
@@ -14,6 +16,7 @@ how?
 it has 0 1 2 3 as inc and
 1 0 as dec
 
+also take note that, the order should be stricly greater than one only, even if diff is greater than 1, it's not valid...
 
 
 if the length is less than 3, it can never be a mountain arr
