@@ -47,8 +47,8 @@ public:
             return false;
         }
 
-        bool incDone = false;
-        bool decDone = false;
+        // bool incDone = false;
+        // bool decDone = false;
 
         while (i < n - 1)
         {
@@ -75,8 +75,9 @@ public:
         // i++; // no need to do this..
 
         while (i < n - 1)
-        {
-            if (arr[i] < arr[i + 1] )
+        {   
+            // i was checking for a wrong condition in here..
+            if (arr[i] > arr[i + 1] )
             {
                 // we can go ahead
                 i++;
@@ -97,3 +98,24 @@ public:
         return false;   
     }
 };
+
+
+/*
+so basically what i did,
+i used while loops,
+to check if the item in arr at left is less than right, (diff should be one)
+but idk why 
+it works just to check that ok if its even greater its alr
+
+similiary i did the same for decreasing sequence im sure u know..
+
+now...
+
+after the first while loop,
+i check with a condition,
+has my i even iterated from 0 position or reached end?
+this means, it's not a mountain arr ok?
+
+after the second while loop ends and i HAS reached end, so it is a mountain arr,
+that's it..
+*/
