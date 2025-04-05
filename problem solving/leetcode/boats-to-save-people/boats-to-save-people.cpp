@@ -29,14 +29,42 @@ class Solution {
             sort(people.begin(), people.end()); // sorting the arr
 
             int light = 0; int heavy = n - 1;
+            int boats = 0;
 
             // let's try to solve it, then we'll fix this code alr?
 
-            while (light < heavy) {
+            while (light <= heavy) {
+
+                if (light == heavy) {
+                    boats++;
+                    break;
+                }
+                // let's say if left + right is within the limit, inc and decre both, as we done it and increment boats
+
+                // if we can do it,, what should we do?still inc boats and dec heavy? righT????
+                // because we couldn't find a proper match for it,
+                // at the end we may be left with one ele...
+                /*
+                */
+
+                if (people[light] + people[heavy] <= limit) {
+                    // we can take both, and inc our boat coutner
+                    boats++;
+                    light++; 
+                    heavy--;
+                } else {
+                    // otherwise the boats must have been greater than right?
+                    // if less or eq, above loop will take care..
+                    boats++;
+                    heavy--;
+                    // but don't increment light, as a match is yet to be found..
+                }
 
 
             }
 
+
+            return boats;
 
 
         }
