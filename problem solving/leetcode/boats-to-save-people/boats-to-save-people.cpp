@@ -24,6 +24,25 @@ so haev two pointers one on left and one on right..
 class Solution {
     public:
         int numRescueBoats(vector<int>& people, int limit) {
-            
+            int n = people.size(); // size of the arr
+
+            sort(people.begin(), people.end()); // sorting the arr
+
+            int light = 0; int heavy = n - 1;
+
+            // let's try to solve it, then we'll fix this code alr?
+
+            while (light < heavy) {
+
+
+            }
+
+
+
         }
     };
+
+/* 
+LISTEN CAREFULLY:
+
+*/
