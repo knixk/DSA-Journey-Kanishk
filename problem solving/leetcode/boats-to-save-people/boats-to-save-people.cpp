@@ -10,6 +10,11 @@ worst case would be basically,
 the number of people in the arr
 
 
+now that we've got an intuition let's try to solve this problem...
+
+so haev two pointers one on left and one on right..
+
+
 
 */
 

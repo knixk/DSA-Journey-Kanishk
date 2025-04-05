@@ -44,6 +44,7 @@ public:
 
         if (n < 3)
         {
+            // if the size is less than 3, it can never be a valid mountains arr
             return false;
         }
 
@@ -52,6 +53,7 @@ public:
 
         while (i < n - 1)
         {
+            // while our cur elemt is smaller than next, we want to advance
             if (arr[i + 1] > arr[i])
             {
                 // we can go ahead
@@ -62,12 +64,14 @@ public:
                 break;
             }
 
-            // we have reached our peak
         }
+
+        // after while loop ends, we have reached our peak
+
 
         // incDone = true;
         if (i == n - 1 || i == 0)
-        {
+        // {   now we check..
             // if we never advanced or reached end already
             return false;
         }
@@ -76,6 +80,7 @@ public:
 
         while (i < n - 1)
         {   
+            // now we check if the arr follows a decreasing manner, till and including the n - 2 idex
             // i was checking for a wrong condition in here..
             if (arr[i] > arr[i + 1] )
             {
