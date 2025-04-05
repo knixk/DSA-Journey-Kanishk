@@ -26,7 +26,8 @@ class Solution {
         int numRescueBoats(vector<int>& people, int limit) {
             int n = people.size(); // size of the arr
 
-            sort(people.begin(), people.end()); // sorting the arr
+            // WITHOUT THIS, IT MAY NOT WORK!!
+            sort(people.begin(), people.end()); // sorting the arr 
 
             int light = 0; int heavy = n - 1;
             int boats = 0;
@@ -72,5 +73,7 @@ class Solution {
 
 /* 
 LISTEN CAREFULLY:
+summary of this problem,
+if we could include a nice visual diagram which would explain wouldn't it be good
 
 */
