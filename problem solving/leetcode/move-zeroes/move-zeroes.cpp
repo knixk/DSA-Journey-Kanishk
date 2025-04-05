@@ -1,4 +1,16 @@
+
 /*
+MISTAKES I MADE WHILE LEARNING TO CODE PREVIOUSLY,
+DIDN'T SOLVE MANY PROBLEMS,
+YES I DID,
+BUT I TOOK FOREVER TO JUST SOLVE A SIMPLE PROBLEM,
+THAT WAS VERY BAD DUDE!!
+
+YOU MUST QUICKLY SOLVE PROBLEMS INORDER TO BECOME EFFICIENT
+*/
+
+/*
+
 intuition,
 let
 say we loop over the arr build a second arr right?
@@ -49,4 +61,17 @@ class Solution {
     copy this newmade arr to that old one
 
     that's it
+
+    another way to solve this would be,
+    prolly 
+
+    one way, is the arr sorted? if yes then only it will work
+    and reverse this
+        so 
+     2 1 0 0
+     0 0 1 2
+     2 1 0 0  // now we must reverse the non zero part
+     1 2 0 0
+
+     this should be our ans right?
     */
