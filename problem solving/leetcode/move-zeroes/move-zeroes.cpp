@@ -50,7 +50,7 @@ class Solution {
             }
         }
     };
-
+ 
 
     /*
     basically intuition was simple,
