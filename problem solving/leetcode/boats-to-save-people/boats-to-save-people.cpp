@@ -76,4 +76,17 @@ LISTEN CAREFULLY:
 summary of this problem,
 if we could include a nice visual diagram which would explain wouldn't it be good
 
+
+TIME COMPLEXITY?
+what should be the time complexity for this?
+we use the sorting method,
+whcih is prolly insertion sort,
+about nLogN,
+and the while loop, at most will got n,
+
+so nLogN
+
+this was kind of a maximization problem,
+and we make use of two pointers in this..
 */
+ 
