@@ -61,7 +61,7 @@ public:
                 // and
                 i = map[s[j]] + 1; // make i one more than the last idex of it
                 map[s[j]] = j;
-                // j++;
+                j++;
                 // do we need to increment the j counter?
                 //  don't i inc the j counter here?
                 /*
