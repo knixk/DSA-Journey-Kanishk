@@ -5,6 +5,7 @@
         "xstring": "cpp",
         "algorithm": "cpp",
         "limits": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "xlocale": "cpp"
     }
 }
