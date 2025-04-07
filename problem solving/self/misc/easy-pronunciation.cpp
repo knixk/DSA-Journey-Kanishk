@@ -1,3 +1,6 @@
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -88,3 +91,8 @@ int main() {
 }
 
 // To do : Figure out time complexity
+
+/*
+basically this problem, asks if the current string has more than 4 vowels, it's not a easy to prnounce word
+otherwise it is 
+*/

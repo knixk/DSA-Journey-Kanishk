@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
 char * mystrtok(char * str, char delim) {
 	
 	static char * input = NULL;

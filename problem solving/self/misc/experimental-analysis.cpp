@@ -25,3 +25,13 @@ int main() {
 	
 
 }
+
+/*
+i create an arr with this
+syntax
+arr[i] = n - i
+
+as the i increases our val decreases right..
+
+we're calculating how much time it takes
+*/

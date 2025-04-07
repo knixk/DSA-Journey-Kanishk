@@ -22,3 +22,7 @@ int main() {
 	cout << fast_expo(a, n);
 	return 0;		
 }	
+
+/*
+watch solution
+*/

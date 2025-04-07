@@ -29,3 +29,17 @@ int main() {
 	
 
 }
+
+
+/*
+create a deque of type int, called it as dq
+
+then i say,
+basically set the dp arr at i to it's square?
+
+then we push pop and push?
+
+wait what does it do?
+
+i guess it was a test?
+*/

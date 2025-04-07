@@ -32,3 +32,12 @@ int main() {
 	return 0;
 }
 
+
+/*
+get the hours by dividing mins / 60
+get the mins hands by modding
+
+convert both to str,
+
+then show it accordingly im sure u can do it...
+*/

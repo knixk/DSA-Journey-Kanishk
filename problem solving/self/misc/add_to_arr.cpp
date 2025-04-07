@@ -1,6 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+
+/*
+
+summary:
+
+
+
+*/
+
 vector<int> addToArrayForm(vector<int>& num, int k) {
     if(k==0) return num;
     string s= to_string(k);
