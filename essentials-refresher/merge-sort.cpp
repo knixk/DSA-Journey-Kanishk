@@ -110,4 +110,5 @@ call finishes it will take the right call..
 
 /*
 uc an never be confident unless u DIY
+keep revising this else ull forget and fail in interview..
 */
