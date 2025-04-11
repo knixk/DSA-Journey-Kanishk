@@ -9,6 +9,11 @@
 // * };
 	
 	// took 3 days to understand
+
+	/*
+	damn this is really hard dude,
+	it does have a nice intuition...
+	*/
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
