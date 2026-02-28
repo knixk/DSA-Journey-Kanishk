@@ -181,7 +181,7 @@ function graphTraversalExample(graph, start){
                 queue.push(nei);
             }
         }
-    }
+    
 
     // DFS
     function dfs(node, visited=new Set()){
